@@ -1,0 +1,118 @@
+.seccion-info {
+    display: flex;
+    flex-direction: column;
+    background-color: lighten($negro, 20);
+}
+
+li, legend, label {
+    color: $blanco;
+}
+
+legend {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contenido-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10rem;
+    align-items: center;
+    padding: 5rem;
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        
+    }
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: auto;
+    }
+}
+
+.menu-lista {
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        @include tablet {
+            align-items: flex-start;
+        }
+    
+    }
+}
+
+.seccion-redes-sociales{
+    background-color: lighten($negro, 10);
+    padding: 2rem 0;
+}
+
+.iconos-redes-sociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 3rem;
+    align-items: center;
+    list-style: none;
+    .icono {
+        height: 3rem;
+    }
+
+    @include tablet {
+        justify-content: flex-start;
+    }
+}
+
+
+
+.formulario {
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        min-width: 30rem;
+        padding: 2rem;
+
+        @include tablet {
+            width: 40rem;
+        }
+    }
+    .contenido-form {
+        @include grid(2, 2rem);
+        grid-template-columns: 20% auto;
+    }
+}
+
+.boton-formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include boton($amarillo, $blanco);
+
+    input {
+        text-align: center;
+        font-size: 1.4rem;
+        width: auto;
+
+        &:hover {
+            background-color: darken($amarillo, 10);
+        }
+     
+        @include tablet {
+            width: 20rem;
+        }
+
+    }
+}

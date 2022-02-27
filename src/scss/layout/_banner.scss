@@ -1,0 +1,26 @@
+.no-webp .contenido-banner {
+    background-image: url("../img/banner.jpg");
+}
+
+.webp .contenido-banner {
+    background-image: url("../img/banner.webp");
+}
+
+.contenido-banner {
+    //background-image: url('../img/banner.webp');
+    background-position: center center;
+    background-size: cover;
+    height: 10rem;
+
+    @include telefono {
+        height: 20rem;
+    }
+
+    @include tablet {
+        height: 30rem;
+    }
+
+    @include desktop {
+        height: 40rem;
+    }
+}

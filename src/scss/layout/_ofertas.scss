@@ -1,0 +1,95 @@
+.seccion-ofertas {
+    background-color: $blanco;
+    h1 {
+        margin: 0 0 0 5rem;
+        font-size: 7rem;
+        line-height: 8rem;
+        text-transform: uppercase;
+        color: $amarillo;
+    }
+
+    @include tablet {
+        h1 {
+            line-height: 10rem;
+        }
+    }
+}
+
+.contenedor-anuncios {
+    background-color: lighten($gris, 5);
+    border-radius: 1% 1% 0 0;
+    padding: 2rem;
+    
+
+    @include telefono {
+        @include grid(1, 2rem);  
+    }
+
+    @include tablet {
+        @include grid(2, 2rem);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include desktop {
+        @include grid(3, 2rem);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+.anuncio {
+    padding: 1rem;
+    background-color: lighten($grisOscuro, 50);
+    border-radius: 5%;
+    margin-bottom: 1rem;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    @include tablet {
+        margin-bottom: 0;
+    }
+
+    picture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $blanco;
+        border-radius: 5% 5% 0 0;
+    }
+
+    
+}
+
+.contenido-anuncio{
+
+    p {
+        font-size: 1.7rem;
+        text-align: center;
+        font-weight: $regular;
+        color: $azulOscuro;
+    }
+
+}
+
+.contenido-boton {
+    padding: 0 1rem 1rem 1rem;
+    @include boton($azul, $blanco);
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    a {
+        display: block;
+        text-align: center;
+        font-size: 1.4rem;
+
+        &:hover {
+            background-color: darken($azul, 10);
+        }
+        
+    }
+}
