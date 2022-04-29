@@ -1,3 +1,5 @@
+
+
 .seccion-ofertas {
     background-color: $blanco;
     h1 {
@@ -6,6 +8,7 @@
         line-height: 8rem;
         text-transform: uppercase;
         color: $amarillo;
+        text-shadow: #9d9d9d 2px 2px 5px;
     }
 
     @include tablet {
@@ -19,6 +22,7 @@
     background-color: lighten($gris, 5);
     border-radius: 1% 1% 0 0;
     padding: 2rem;
+    box-shadow: -2px 4px 5px 0.5px rgba(0, 0, 0, 0.2);
     
 
     @include telefono {
@@ -38,9 +42,11 @@
 
 .anuncio {
     padding: 1rem;
-    background-color: lighten($grisOscuro, 50);
-    border-radius: 5%;
+    background-color: lighten($negro, 40);
+    border-radius: 5% 5% 0 0;
     margin-bottom: 1rem;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 5px 0.5px rgba(0, 0, 0, 0.2);
     &:last-of-type {
         margin-bottom: 0;
     }
@@ -66,7 +72,7 @@
         font-size: 1.7rem;
         text-align: center;
         font-weight: $regular;
-        color: $azulOscuro;
+        color: $blanco;
     }
 
 }
