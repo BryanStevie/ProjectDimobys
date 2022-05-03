@@ -24,3 +24,90 @@
         height: 40rem;
     }
 }
+
+/* Slider inicio */
+.carousel-elemento {
+    img {
+        height: 30rem;
+        width: 100%;
+    }
+}
+
+.carousel-contenedor {
+    position: relative;
+}
+
+.carousel-anterior, 
+.carousel-siguiente {
+    position: absolute;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    top: calc(50% - 3.5rem);
+    cursor: pointer;
+    line-height: 3rem;
+    text-align: center;
+    background: none;
+    color: #fff;
+    //opacity: 20%;
+}
+
+.carousel-anterior {
+    left: 0px;
+}
+
+.carousel-siguiente {
+    right: 0px;
+}
+
+.carousel-lista {
+    overflow: hidden;
+}
+
+.carousel-indicadores .glider-dot {
+    background: rgb(218, 218, 218);
+}
+
+.carousel-indicadores .glider-dot:hover {
+    opacity: .5;
+}
+
+.carousel-indicadores .glider-dot.active {
+    background: rgb(243, 234, 188);
+    opacity: 1;
+}
+
+/* Slider fin */
+
+/* Barra cupones inicio */
+.barra-cupones{
+    display: flex;
+    justify-content: space-around;
+    column-gap: 2rem;
+    padding: 2rem 0 2rem 0;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(134, 218, 198);
+        height: 10rem;
+        width: 29rem;
+    }
+}
+/* Barra cupones fin */
+
+/* Barra anuncio inicio */
+.barra-anuncio {
+   
+    padding: 2rem 0 2rem 0;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $amarillo;
+        height: 10rem;
+    }
+}
+
+/* Barra anuncio fin */
