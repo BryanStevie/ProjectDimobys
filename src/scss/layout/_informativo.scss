@@ -69,7 +69,15 @@ legend {
 }
 
 
+.contenedor-p {
+    padding-bottom: 3rem;
 
+    p {
+        margin: 0;
+        font-size: 1.2rem;
+        color: $blanco;
+    }
+}
 .formulario {
     fieldset {
         display: flex;
@@ -82,6 +90,7 @@ legend {
         }
     }
     .contenido-form {
+        padding-bottom: 1rem;
         @include grid(2, 2rem);
         grid-template-columns: 20% auto;
     }

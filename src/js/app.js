@@ -1,17 +1,41 @@
 window.addEventListener('load', function(){
 
-var slider = new Glider(document.querySelector('.carousel-lista'), {
-        slidesToShow: 1,
-        dots: '.carousel-indicadores',
+var sliderTercero = new Glider(document.querySelector('.carousel-lista-tercero'),{
+    slidesToShow: 1,
+        dots: '.carousel-indicadores-tercero',
         draggable: false,
         arrows: {
-          prev: '.carousel-anterior',
-          next: '.carousel-siguiente'
+          prev: '.carousel-anterior-tercero',
+          next: '.carousel-siguiente-tercero'
+        }
+
+});
+
+var sliderSecundario = new Glider(document.querySelector('.carousel-lista-secundario'),{
+    slidesToShow: 1,
+        dots: '.carousel-indicadores-secundario',
+        draggable: false,
+        arrows: {
+          prev: '.carousel-anterior-secundario',
+          next: '.carousel-siguiente-secundario'
+        }
+
+});
+
+var sliderPrincipal = new Glider(document.querySelector('.carousel-lista-principal'), {
+        slidesToShow: 1,
+        dots: '.carousel-indicadores-principal',
+        draggable: false,
+        arrows: {
+          prev: '.carousel-anterior-principal',
+          next: '.carousel-siguiente-principal'
         }
       });
 
 /* AUTO REPRODUCCIÓN DE SLIDER INICIO */
-slideAutoPaly(slider, '.carousel-lista');
+slideAutoPaly(sliderTercero, '.carousel-lista-tercero');
+slideAutoPaly(sliderSecundario, '.carousel-lista-secundario');
+slideAutoPaly(sliderPrincipal, '.carousel-lista-principal');
 
 function slideAutoPaly(glider, selector, delay = 5000, repeat = true) {
     let autoplay = null;

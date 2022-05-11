@@ -37,8 +37,12 @@
     position: relative;
 }
 
-.carousel-anterior, 
-.carousel-siguiente {
+.carousel-anterior-principal, 
+.carousel-siguiente-principal,
+.carousel-anterior-secundario,
+.carousel-siguiente-secundario,
+.carousel-anterior-tercero,
+.carousel-siguiente-tercero {
     position: absolute;
     display: block;
     width: 3rem;
@@ -53,27 +57,39 @@
     //opacity: 20%;
 }
 
-.carousel-anterior {
+.carousel-anterior-principal,
+.carousel-anterior-secundario,
+.carousel-anterior-tercero {
     left: 0px;
 }
 
-.carousel-siguiente {
+.carousel-siguiente-principal,
+.carousel-siguiente-secundario,
+.carousel-siguiente-tercero {
     right: 0px;
 }
 
-.carousel-lista {
+.carousel-lista-principal,
+.carousel-lista-secundario,
+.carousel-lista-tercero {
     overflow: hidden;
 }
 
-.carousel-indicadores .glider-dot {
+.carousel-indicadores-principal .glider-dot,
+.carousel-indicadores-secundario .glider-dot,
+.carousel-indicadores-tercero .glider-dot {
     background: rgb(218, 218, 218);
 }
 
-.carousel-indicadores .glider-dot:hover {
+.carousel-indicadores-principal .glider-dot:hover,
+.carousel-indicadores-secundario .glider-dot:hover,
+.carousel-indicadores-tercero .glider-dot:hover {
     opacity: .5;
 }
 
-.carousel-indicadores .glider-dot.active {
+.carousel-indicadores-principal .glider-dot.active,
+.carousel-indicadores-secundario .glider-dot.active,
+.carousel-indicadores-tercero .glider-dot.active {
     background: rgb(243, 234, 188);
     opacity: 1;
 }
@@ -111,3 +127,140 @@
 }
 
 /* Barra anuncio fin */
+
+.grid-barra-four {
+    @include grid(4,1rem);
+    padding: 2rem 0 2rem 0;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(187, 16, 16);
+        height: 26rem;
+        width: 29rem;
+    }
+}
+
+.grid-barra-two {
+    @include grid(2,1rem);
+    padding: 2rem 0 2rem 0;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(52, 63, 212);
+        height: 26rem;
+
+    }
+}
+
+.barra-anuncio-completo{
+    padding: 2rem 0 2rem 0;
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(188, 44, 224);
+        height: 20rem;
+    }
+}
+
+.contenedor-grid-rows {
+    @include grid(2,1rem);
+    padding-bottom: 1rem;
+    height: 40rem;
+}
+
+.background-anuncio-1 {
+    width: 100%;
+    background: rgb(143, 33, 171);
+}
+
+.contenedor-grid-rows .background-1-2 {
+    
+    div {
+        background: rgb(143, 33, 171);
+    }
+}
+
+.contenedor-grid-rows-anuncio-1 {
+    display: flex;
+    background: rgb(255, 255, 255);
+}
+
+
+/* Las ultimas ofertas Tendencias inicio*/
+
+.two{
+    @include grid(2,1rem);
+    padding-bottom: 1rem;
+    
+
+    .background-2 {
+        display: flex;
+        flex-direction: row;
+        background: #fff;
+        height: 40rem;
+        gap: 1rem;
+        div {
+            width: 100%;
+            background: rgb(255, 206, 30);
+        }
+    }
+}
+
+.two-anuncio-1 {
+    display: flex;
+    background: rgb(255, 255, 255);
+    .background-two-anuncio-1{
+        width: 100%;
+        background: rgb(255, 206, 30);
+        height: 40rem;
+    }
+}
+/* Las ultimas Tendencias fin*/
+
+/* Rendondo Anuncio inicio */
+
+.redondo-anuncio{
+    height: 20rem;
+    width: 20rem;
+    background: rgb(52, 63, 212);
+    border-radius: 50%;
+}
+
+.contenedor-redondo-anuncio {
+    p {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+}
+
+.flex-redondo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.redondo {
+    padding: 2rem 0 2rem 0;
+}
+/* Rendondo Anuncio fin */
+
+/* Iconos inicio */
+.contenedor-modulos{
+    padding: 2rem 0 5rem 0;
+}
+
+.contenedor-iconos{
+    display: flex;
+    justify-content: space-around;
+}
+
+.iconos{
+    border: 1px solid lighten($color:rgb(173, 173, 173), $amount: 20);
+    height: 15rem;
+    width: 100%
+}
+
+
+/* Iconos fin */
